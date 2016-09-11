@@ -9,13 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Customer = (function () {
+    function Customer() {
+    }
+    return Customer;
+}());
+exports.Customer = Customer;
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'My Store Customers';
+        this.customer = {
+            id: 1,
+            name: 'John'
+        };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            template: "\n  <h1>{{title}}</h1>\n  <h2>{{customer.name}} details!</h2>\n  <div><label>id: </label>{{customer.id}}</div>\n  <div>\n    <label>name: </label>\n    <input value=\"{{customer.name}}\" placeholder=\"name\">\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
